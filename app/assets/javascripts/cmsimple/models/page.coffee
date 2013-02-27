@@ -1,5 +1,5 @@
 class CMSimple.Page extends Spine.Model
-  @configure 'Page', 'template', 'title', 'parent_id', 'position', 'slug', 'is_root', 'browser_title', 'keywords', 'description', 'published', 'unpublished_changes', 'uri'
+  @configure 'Page', 'template', 'title', 'theme', 'parent_id', 'position', 'slug', 'is_root', 'browser_title', 'keywords', 'description', 'published', 'unpublished_changes', 'uri'
   @extend Spine.Model.Ajax
 
   @belongsTo 'parent', 'CMSimple.Page', 'parent_id'

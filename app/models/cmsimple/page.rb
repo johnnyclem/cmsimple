@@ -5,6 +5,7 @@ module Cmsimple
     attr_accessible :slug,
                     :uri,
                     :title,
+                    :theme,
                     :content,
                     :template,
                     :parent_id,

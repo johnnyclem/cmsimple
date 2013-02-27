@@ -5,11 +5,11 @@ require "cmsimple/version"
 Gem::Specification.new do |s|
   s.name        = "cmsimple"
   s.version     = Cmsimple::VERSION
-  s.authors     = ["Gabe Varela", "Jay Zeschin", "Matt Kitt", "John Clem"]
+  s.authors     = ["Gabe Varela", "Jay Zeschin", "Matt Kitt"]
   s.email       = ["info@modeset.com"]
   s.homepage    = ""
-  s.summary     = %q{A fork of a simple CMS based on the Mercury editor}
-  s.description = %q{A fork of a simple CMS based on the Mercury editor}
+  s.summary     = %q{A simple CMS based on the Mercury editor}
+  s.description = %q{A simple CMS based on the Mercury editor}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "rails", "~> 3.2.1"
-  s.add_runtime_dependency 'jquery-rails', ">= 2.1.3"
+  s.add_runtime_dependency 'jquery-rails', "~> 2.1.3"
   s.add_runtime_dependency "mercury-rails"
   s.add_runtime_dependency "cells", "~> 3.8"
   s.add_runtime_dependency "carrierwave", "~> 0.5.8"

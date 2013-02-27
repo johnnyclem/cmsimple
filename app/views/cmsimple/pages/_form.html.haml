@@ -11,13 +11,17 @@
         .controls
           = f.text_field :slug
     %fieldset
-      %legend Appearance
+      %legend Page Appearance
       .control-group
         = f.label :template, class: 'control-label'
         .controls
           = f.select :template, Cmsimple::TemplateResolver.all, include_blank: 'None / Inherit'
+      .control-group
+        = f.label :theme, class: 'control-label'
+        .controls
+          = f.select :theme, [['Blue', ''], ['Dark', 'dark'], ['Light', 'light'], ['Red', 'red'], ['Tan', 'tan']]
     %fieldset
-      %legend Hierarchy
+      %legend Page Location
       .control-group
         = f.label :parent_id, class: 'control-label'
         .controls
@@ -27,20 +31,6 @@
           = f.label :is_root, class: 'checkbox' do
             Home Page?
             = f.check_box :is_root
-    %fieldset
-      %legend SEO Info
-      .control-group
-        = f.label :browser_title, class: 'control-label'
-        .controls
-          = f.text_field :browser_title
-      .control-group
-        = f.label :keywords, class: 'control-label'
-        .controls
-          = f.text_field :keywords
-      .control-group
-        = f.label :description, class: 'control-label'
-        .controls
-          = f.text_field :description, input_html: {rows: 5}
     = render partial: 'form_extras', locals: {f: f}
 
   .form-actions.mercury-display-controls

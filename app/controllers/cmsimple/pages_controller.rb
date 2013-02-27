@@ -12,7 +12,7 @@ module Cmsimple
 
     def show
       @page = Page.find(params[:id])
-      respond_with @page
+      respond_with @page, @pages => Page.all
     end
 
     def update_content
@@ -69,7 +69,7 @@ module Cmsimple
 
     #helpers
     def current_path
-      @path ||= Path.from_request(params[:path])
+      @path ||= Path.from_request!(request)
     end
 
     def current_page

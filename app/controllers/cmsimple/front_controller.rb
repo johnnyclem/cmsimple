@@ -8,6 +8,7 @@ module Cmsimple
     respond_to :html, :json, :js
 
     def show
+      @pages = Page.all
       Cmsimple::PageResponder.new(self).respond
     end
 
@@ -16,7 +17,7 @@ module Cmsimple
     end
 
     def current_path
-      @path ||= Path.from_request(params[:path])
+      @path ||= Path.from_request!(request)
     end
 
     def current_page
